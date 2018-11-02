@@ -1,15 +1,15 @@
-#DB設計
+# DB設計
 
 ## userテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false,unique: true|
-|email|integer|null: false,unique: true|
 
 ### Association
 - has_many :comments
 - has_many :members
+- has_many :groups, through: :members
 
 ### インデックス
 add_index :users, [:name]
@@ -28,17 +28,18 @@ add_index :users, [:name]
 - belongs_to :user
 
 ### インデックス
-add_index :comments, [:body, ;image]
+add_index :comments, [:body, :image]
 
 ## groupテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, foreign_key: true|
+|name|string|null: false|
 
 ### Association
 - has_many :members
 - has_many :comments
+- has_many :users, through: :members
 
 ## memberテーブル
 
