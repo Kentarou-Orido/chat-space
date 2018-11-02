@@ -33,6 +33,12 @@ body{
             background-color: white;
             height: 15%;
             padding: 0 40px;
+            &__group-name{
+                color: #333333;
+                font-size: 20px;
+                padding: 35px 0 15px 0 ;
+
+            }
         }
         &__chat-main{
             height: calc(100vh - 15% - 90px);
@@ -44,5 +50,5 @@ body{
           height: 90px;
           padding: 0 40px;
         }
-  }
+    }
 }
