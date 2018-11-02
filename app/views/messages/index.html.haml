@@ -1,0 +1,17 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title ChatSpace
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    %div.notification-bar
+    %div.left-side
+      %div.left-side__top-bar
+      %div.left-side__bottom-bar
+    %div.right-main
+      %div.right-main__header-bar
+      %div.right-main__chat-main
+      %div.right-main__footer-bar
