@@ -6,22 +6,25 @@ body{
       background-color: #38AEF0;
       height: 30px;
       width: 100vw;
+      color: white;
+      text-align: center;
+      line-height: 30px;
     }
 
     .left-side{
-        height: 100vh;
-        width: 300px;
-        float: left;
-        &__top-bar{
-            background-color: #253141;
-            height: 15vh;
-            padding: 0 20px;
-        }
-        &__bottom-bar{
-            background-color: #2f3e51;
-            height: 85vh;
-            padding: 0 20px;
-        }
+      height: 100vh;
+      width: 300px;
+      float: left;
+      &__top-bar{
+          background-color: #253141;
+          height: 15vh;
+          padding: 0 20px;
+      }
+      &__bottom-bar{
+          background-color: #2f3e51;
+          height: 85vh;
+          padding: 0 20px;
+      }
     }
 
     .right-main{
@@ -29,26 +32,126 @@ body{
         height: 100vh;
         float: left;
         &__header-bar{
-            border-color: #eeeeee;
-            background-color: white;
-            height: 15%;
-            padding: 0 40px;
-            &__group-name{
-                color: #333333;
-                font-size: 20px;
-                padding: 35px 0 15px 0 ;
-
-            }
+          border-bottom: solid thin #eeeeee;
+          background-color: white;
+          height: 117px;
+          padding: 0 40px;
+          &__group-name{
+              color: #333333;
+              font-size: 20px;
+              padding: 35px 0 15px 0 ;
+              float: left;
+          }
+          &__edit-btn{
+              margin-top: 28px;
+              height: 40px;
+              border: solid 2px #38AEF0;
+              float: right;
+              padding: 0 15px;
+              line-height: 40px;
+              color: #38AEF0;
+              text-decoration: none;
+          }
+          &__group-members{
+          font-size: 12px;
+          color: #999999;
+          clear: both;
+          }
         }
         &__chat-main{
-            height: calc(100vh - 15% - 90px);
-            padding: 0 40px;
-            background-color: #AAAAAA;
+          height: calc(100vh - 117px - 90px);
+          padding: 0 40px;
+          background-color: white;
+          &__message{
+            &__name{
+              float: left;
+              font-weight: bold;
+              font-size: 16px;
+              color: #434A54;
+              padding-top: 40px;
+            }
+            &__time{
+              float: left;
+              font-size: 12px;
+              color: #999999;
+              padding: 40px 0 0 10px;
+            }
+            &__body{
+              clear: both;
+              font-size: 14px;
+              color: #434A54;
+              padding-top: 10px;
+            }
+          }
+            &__next-message{
+              &__name{
+                font-weight: bold;
+                font-size: 16px;
+                color: #434A54;
+                float: left;
+                padding-top: 40px;
+              }
+              &__time{
+                float: left;
+                font-size: 12px;
+                color: #999999;
+                padding: 40px 0 0 10px;
+              }
+              &__body{
+                clear: both;
+                font-size: 14px;
+                color: #434A54;
+                padding-top: 10px;
+              }
+            }
         }
-        &__footer-bar{
+        &__footer{
           background-color: #B8C3C7;
           height: 90px;
-          padding: 0 40px;
+          &__form{
+            margin: 0 40px;
+            position: relative;
+            &__body{
+              position: relative;
+              &__message{
+                height: 50px;
+                border: none;
+                width: calc(100% - 124px);
+                margin: 20px 0;
+                padding-left: 10px;
+                background-color: white;
+                font-size: 16px;
+                color: #434A54;
+              }
+              &__label{
+                position: absolute;
+                top: 33px;
+                right: 114px;
+                margin: 0 10px 0 0;
+                &__span{
+                  &__fa fa-image{
+                    top: 15px;
+                    right: 15px;
+                  }
+                }
+                &__input{
+                  display: none;
+                  position: absolute;
+                }
+              }
+              &__submit{
+                width: 100px;
+                height: 50px;
+                margin: 20px 0 20px 15px;
+                border-color: #38AEF0;
+                background-color: #38AEF0;
+                color: white;
+                position: absolute;
+                top: 0;
+                right: 0;
+              }
+            }
+          }
         }
+      }
     }
-}

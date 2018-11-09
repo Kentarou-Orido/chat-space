@@ -6,13 +6,32 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
+    %link{ rel: "stylesheet", href: "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"}
   %body
-    %div.notification-bar
+    %div.notification-bar チャットグループが作成されました
     %div.left-side
       %div.left-side__top-bar
       %div.left-side__bottom-bar
     %div.right-main
       %div.right-main__header-bar
         %div.right-main__header-bar__group-name sample
+        %a.right-main__header-bar__edit-btn{ href: ""} Edit
+        %div.right-main__header-bar__group-members Members: ore
       %div.right-main__chat-main
-      %div.right-main__footer-bar
+        %div.right-main__chat-main__message
+          %div.right-main__chat-main__message__name ore
+          %div.right-main__chat-main__message__time 2018/11/6 22:00:00
+          %div.right-main__chat-main__message__body 眠い
+        %div.right-main__chat-main__next-message
+          %div.right-main__chat-main__next-message__name ore
+          %div.right-main__chat-main__next-message__time 2018/11/6 22:01:32
+          %div.right-main__chat-main__next-message__body 野球終わって寂しい
+      %div.right-main__footer
+        %form.right-main__footer__form
+          %div.right-main__footer__form__body
+            %input.right-main__footer__form__body__message{ type: "text", placeholder: "type a message"}
+            %label.right-main__footer__form__body__label
+              %span.right-main__footer__form__body__label__span
+                <i class="fa fa-image "></i>
+              %input.right-main__footer__form__body__label__input{ type: "file"}
+            %input.right-main__footer__form__body__submit{ type: "submit", value: "Send"}
