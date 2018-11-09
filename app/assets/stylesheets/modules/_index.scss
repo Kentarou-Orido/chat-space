@@ -17,14 +17,14 @@ body{
       float: left;
       &__top-bar{
           background-color: #253141;
-          height: 15vh;
+          height: 117px;
           padding: 0 20px;
           text-align: left;
           &__user-name{
             font-size: 16px;
             font-weight: bold;
             color: $MainWhiteColor;
-            line-height: 73px;
+            line-height: 108px;
             display: inline-block;
           }
           &__create-group{
@@ -39,7 +39,7 @@ body{
       }
       &__bottom-bar{
         background-color: #2f3e51;
-        height: 85vh;
+        height: calc(100vh - 117px);
         padding: 0 20px;
         &__group1{
           text-decoration: none;

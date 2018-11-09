@@ -1,3 +1,4 @@
 @import "./reset";
-@import "./_variable";
-@import "./index";
+@import "./config/variable";
+@import "./mixin/mixin";
+@import "./modules/index";
