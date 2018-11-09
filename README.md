@@ -1,4 +1,26 @@
-# DB設計
+# Chat Space チャット画面の制作
+
+## 概要
+- 指定通り、メッセージコントローラーを作り、indexアクションがrootパスになるようルーティング
+- コントローラー制作時発生する不要ファイルは、application.rbに不要ファイルを作らないように表記して防いだ
+- ビューファイルはapp/views/messages/index.html.hamlに設置
+- app/assets/stylesheets以下にscssファイルを設置
+- font awesome導入済み
+
+## scssファイルの詳細内容
+
+- _variable.scss
+  index.scssファイル内で複数回使うプロパティの値（色とか）を定義
+- _mixin.scss
+  index.scssファイル内で複数回使うスタイルを定義
+- _index.scss
+  index.html.hamlのためのscssファイル
+- _reset.scss
+  リセットcss。指定通り、YUI 3を使用した
+- _application.scss
+  複数存在するscssを統合するためのscssファイル
+
+<!-- # DB設計
 
 ## userテーブル
 
@@ -51,3 +73,4 @@ add_index :comments, [:body, :image]
 ### Association
 - belongs_to :group
 - belongs_to :user
+ -->
