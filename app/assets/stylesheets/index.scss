@@ -19,11 +19,55 @@ body{
           background-color: #253141;
           height: 15vh;
           padding: 0 20px;
+          text-align: left;
+          &__user-name{
+            font-size: 16px;
+            font-weight: bold;
+            color: #FFFFFF;
+            line-height: 73px;
+            display: inline-block;
+          }
+          &__create-group{
+            color: white;
+            margin-left: 180px;
+            text-decoration: none;
+          }
+          &__user-setting{
+            color: white;
+            text-decoration: none;
+          }
       }
       &__bottom-bar{
-          background-color: #2f3e51;
-          height: 85vh;
-          padding: 0 20px;
+        background-color: #2f3e51;
+        height: 85vh;
+        padding: 0 20px;
+        &__group1{
+          text-decoration: none;
+          &__group-name{
+            font-size: 15px;
+            color: #FFFFFF;
+            padding: 20px 0 5px 0;
+          }
+          &__new-message{
+            font-size: 11px;
+            color: #FFFFFF;
+            margin: 0 0 40px 0;
+          }
+        }
+        &__group2{
+          text-decoration: none;
+          &__group-name{
+            font-size: 15px;
+            color: #FFFFFF;
+            padding: 0 0 5px 0;
+          }
+          &__new-message{
+            font-size: 11px;
+            color: #FFFFFF;
+            margin: 0 0 40px 0;
+          }
+        }
+
       }
     }
 
