@@ -1,0 +1,40 @@
+$MainCyanColor: #38AEF0;
+$MainWhiteColor: #FFFFFF;
+$MainBlackColor: #434A54;
+$MainGrayColor: #999999;
+
+@mixin first-group-name{
+  font-size: 15px;
+  color: $MainWhiteColor;
+  padding: 20px 0 5px 0;
+}
+@mixin group-message{
+  font-size: 11px;
+  color: $MainWhiteColor;
+  margin: 0 0 40px 0;
+}
+@mixin second-group-name{
+  font-size: 15px;
+  color: $MainWhiteColor;
+  margin: 0 0 5px 0;
+}
+@mixin chat-main-message-name{
+  float: left;
+  font-weight: bold;
+  font-size: 16px;
+  color: $MainBlackColor;
+  padding-top: 46px;
+}
+@mixin chat-main-message-time{
+  float: left;
+  font-size: 12px;
+  color: #999999;
+  padding: 46px 0 0 10px;
+
+}
+@mixin chat-main-message-body{
+  clear: both;
+  font-size: 14px;
+  color: $MainBlackColor;
+  padding-top: 10px;
+}
