@@ -1,48 +1,48 @@
 !!!
 %html
   %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{content: "text/html; charset=UTF-8", "Content-Type": "Content-Type"}/
     %title ChatSpace
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
     %link{rel: "stylesheet", href: "https://use.fontawesome.com/releases/v5.5.0/css/all.css", integrity: "sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU", crossorigin: "anonymous"}
   %body
-    %div.notification-bar チャットグループが作成されました
-    %div.left-side
-      %div.left-side__top-bar
-        %div.left-side__top-bar__user-name ore
-        %a.left-side__top-bar__create-group{ href: ""}
-          <i class="fas fa-edit"></i>
-        %a.left-side__top-bar__user-setting{ href: ""}
-          <i class="fas fa-cog"></i>
-      %div.left-side__bottom-bar
-        %a.left-side__bottom-bar__group1{ href: ""}
-          %div.left-side__bottom-bar__group1__group-name sample
-          %div.left-side__bottom-bar__group1__new-message 野球終わって寂しい
-        %a.left-side__bottom-bar__group2{ href: ""}
-          %div.left-side__bottom-bar__group2__group-name 来季の楽天イーグルスが上位争いにくこむために必要なものを考えるグループ
-          %div.left-side__bottom-bar__group2__new-message 三木谷の辞任でしょ
-    %div.right-main
-      %div.right-main__header-bar
-        %div.right-main__header-bar__group-name sample
-        %a.right-main__header-bar__edit-btn{ href: ""} Edit
-        %div.right-main__header-bar__group-members Members: ore
-      %div.right-main__chat-main
-        %div.right-main__chat-main__message
-          %div.right-main__chat-main__message__name ore
-          %div.right-main__chat-main__message__time 2018/11/6 22:00:00
-          %div.right-main__chat-main__message__body 眠い
-        %div.right-main__chat-main__next-message
-          %div.right-main__chat-main__next-message__name ore
-          %div.right-main__chat-main__next-message__time 2018/11/6 22:01:32
-          %div.right-main__chat-main__next-message__body 野球終わって寂しい
-      %div.right-main__footer
+    .notification-bar チャットグループが作成されました
+    .left-side
+      .left-side__top-bar
+        .left-side__top-bar__user-name ore
+        =link_to 'https://www.rakuteneagles.jp/', class: "left-side__top-bar__create-group" do
+          %i.fas.fa-edit
+        =link_to 'https://www.rakuteneagles.jp/', class: "left-side__top-bar__user-setting" do
+          %i.fas.fa-cog
+      .left-side__bottom-bar
+        =link_to 'https://www.rakuteneagles.jp/', class:"left-side__bottom-bar__group1" do
+          .left-side__bottom-bar__group1__group-name sample
+          .left-side__bottom-bar__group1__new-message 野球終わって寂しい
+        =link_to 'https://www.rakuteneagles.jp/', class:"left-side__bottom-bar__group2" do
+          .left-side__bottom-bar__group2__group-name 来季の楽天イーグルスが上位争いにくこむために必要なものを考えるグループ
+          .left-side__bottom-bar__group2__new-message 三木谷の辞任でしょ
+    .right-main
+      .right-main__header-bar
+        .right-main__header-bar__group-name sample
+        =link_to "Edit",'https://www.rakuteneagles.jp/', class:"right-main__header-bar__edit-btn"
+        .right-main__header-bar__group-members Members: ore
+      .right-main__chat-main
+        .right-main__chat-main__message
+          .right-main__chat-main__message__name ore
+          .right-main__chat-main__message__time 2018/11/6 22:00:00
+          .right-main__chat-main__message__body 眠い
+        .right-main__chat-main__next-message
+          .right-main__chat-main__next-message__name ore
+          .right-main__chat-main__next-message__time 2018/11/6 22:01:32
+          .right-main__chat-main__next-message__body 野球終わって寂しい
+      .right-main__footer
         %form.right-main__footer__form
-          %div.right-main__footer__form__body
+          .right-main__footer__form__body
             %input.right-main__footer__form__body__message{ type: "text", placeholder: "type a message"}
             %label.right-main__footer__form__body__label
               %span.right-main__footer__form__body__label__span
-                <i class="fa fa-image "></i>
+                %i.fa.fa-image
               %input.right-main__footer__form__body__label__input{ type: "file"}
             %input.right-main__footer__form__body__submit{ type: "submit", value: "Send"}
