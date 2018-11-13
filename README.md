@@ -50,7 +50,7 @@
     - [補足]htmlのクラス命名時、notification-barの後に、bc-cyanをクラスを別に指定すれば、バーの背景色はシアンに
     - [補足]bc-redに指定すると背景色は赤になるようにした
 
-<!-- # DB設計
+# DB設計
 
 ## userテーブル
 
@@ -103,4 +103,4 @@ add_index :comments, [:body, :image]
 ### Association
 - belongs_to :group
 - belongs_to :user
- -->
+
