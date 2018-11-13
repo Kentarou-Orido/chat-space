@@ -22,26 +22,28 @@
 
 ## 指摘を受けての変更点
 
----
-### 前々回指摘分
 
+### 前々回指摘分(ここから)
+---
 ### index.html.hamlの記述に関する指摘
-~~- [指摘点]a要素とi要素はヘルパーメソッドを使おう~~
-~~  - １５、１７、２０、２３行目のa要素をlink_toメソッドで表記し直した~~
-~~- [指摘点]%divは省略しよう~~
-~~  - 全ての%divの表記を削除した~~
-~~- [指摘点]４行目にハッシュロケットを使った記法あり。古い記法だから修正しよう~~
-~~  - rubyのハッシュと同じように、シンボルを使った記法に変えた。~~
 
-### 前々回指摘分ここまで
----
+- [指摘点]a要素とi要素はヘルパーメソッドを使おう
+    - １５、１７、２０、２３行目のa要素をlink_toメソッドで表記し直した
+- [指摘点]%divは省略しよう
+    - 全ての%divの表記を削除した
+- [指摘点]４行目にハッシュロケットを使った記法あり。古い記法だから修正しよう
+    - rubyのハッシュと同じように、シンボルを使った記法に変えた。
+
+### 前々回指摘分（ここまで）
+
 ###前回指摘分
+---
 - [指摘点]htmlとscssはもう少し分けられる
-  - index.html.hmlに部分テンプレートを適用し、**right-main.html.haml**と**left-side.html.haml**に分けた
-  - index.scssはパーシャル機能を使って、**right-main.scss**と**left-side.scss**と**notification-bar.scss**に分けた
+    - index.html.hmlに部分テンプレートを適用し、**right-main.html.haml**と**left-side.html.haml**に分けた
+    - index.scssはパーシャル機能を使って、**right-main.scss**と**left-side.scss**と**notification-bar.scss**に分けた
 - [指摘点]アイコンはヘルパーメソッドを使って記述して
-  - application.scssにfont-swesomeに関する記述を追加し、fa_iconメソッドを使って表記し直した
-  - 上記の記述追加に伴い、index.html.hamlのhead部分にあったfont-awesomeに関する記述は削除した
+    - application.scssにfont-swesomeに関する記述を追加し、fa_iconメソッドを使って表記し直した
+    - 上記の記述追加に伴い、index.html.hamlのhead部分にあったfont-awesomeに関する記述は削除した
 
 #### notification-bar.scssを作った理由
     - ログイン画面など他のところでも流用できそうだったため。
