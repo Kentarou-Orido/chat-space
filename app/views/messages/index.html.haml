@@ -6,43 +6,7 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
-    %link{rel: "stylesheet", href: "https://use.fontawesome.com/releases/v5.5.0/css/all.css", integrity: "sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU", crossorigin: "anonymous"}
   %body
-    .notification-bar チャットグループが作成されました
-    .left-side
-      .left-side__top-bar
-        .left-side__top-bar__user-name ore
-        =link_to 'https://www.rakuteneagles.jp/', class: "left-side__top-bar__create-group" do
-          %i.fas.fa-edit
-        =link_to 'https://www.rakuteneagles.jp/', class: "left-side__top-bar__user-setting" do
-          %i.fas.fa-cog
-      .left-side__bottom-bar
-        =link_to 'https://www.rakuteneagles.jp/', class:"left-side__bottom-bar__group1" do
-          .left-side__bottom-bar__group1__group-name sample
-          .left-side__bottom-bar__group1__new-message 野球終わって寂しい
-        =link_to 'https://www.rakuteneagles.jp/', class:"left-side__bottom-bar__group2" do
-          .left-side__bottom-bar__group2__group-name 来季の楽天イーグルスが上位争いにくこむために必要なものを考えるグループ
-          .left-side__bottom-bar__group2__new-message 三木谷の辞任でしょ
-    .right-main
-      .right-main__header-bar
-        .right-main__header-bar__group-name sample
-        =link_to "Edit",'https://www.rakuteneagles.jp/', class:"right-main__header-bar__edit-btn"
-        .right-main__header-bar__group-members Members: ore
-      .right-main__chat-main
-        .right-main__chat-main__message
-          .right-main__chat-main__message__name ore
-          .right-main__chat-main__message__time 2018/11/6 22:00:00
-          .right-main__chat-main__message__body 眠い
-        .right-main__chat-main__next-message
-          .right-main__chat-main__next-message__name ore
-          .right-main__chat-main__next-message__time 2018/11/6 22:01:32
-          .right-main__chat-main__next-message__body 野球終わって寂しい
-      .right-main__footer
-        %form.right-main__footer__form
-          .right-main__footer__form__body
-            %input.right-main__footer__form__body__message{ type: "text", placeholder: "type a message"}
-            %label.right-main__footer__form__body__label
-              %span.right-main__footer__form__body__label__span
-                %i.fa.fa-image
-              %input.right-main__footer__form__body__label__input{ type: "file"}
-            %input.right-main__footer__form__body__submit{ type: "submit", value: "Send"}
+    .notification-bar.bc-cyan チャットグループが作成されました
+    = render partial: "left-side"
+    = render partial: "right-main"

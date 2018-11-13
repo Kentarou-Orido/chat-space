@@ -1,0 +1,23 @@
+.right-main
+  .right-main__header-bar
+    .right-main__header-bar__group-name sample
+    =link_to "Edit",'https://www.rakuteneagles.jp/', class:"right-main__header-bar__edit-btn"
+    .right-main__header-bar__group-members Members: ore
+  .right-main__chat-main
+    .right-main__chat-main__message
+      .right-main__chat-main__message__name ore
+      .right-main__chat-main__message__time 2018/11/6 22:00:00
+      .right-main__chat-main__message__body 眠い
+    .right-main__chat-main__next-message
+      .right-main__chat-main__next-message__name ore
+      .right-main__chat-main__next-message__time 2018/11/6 22:01:32
+      .right-main__chat-main__next-message__body 野球終わって寂しい
+  .right-main__footer
+    %form.right-main__footer__form
+      .right-main__footer__form__body
+        %input.right-main__footer__form__body__message{ type: "text", placeholder: "type a message"}
+        %label.right-main__footer__form__body__label
+          %span.right-main__footer__form__body__label__span
+            =fa_icon "image"
+          %input.right-main__footer__form__body__label__input{ type: "file"}
+        %input.right-main__footer__form__body__submit{ type: "submit", value: "Send"}
