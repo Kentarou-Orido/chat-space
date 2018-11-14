@@ -1,12 +1,12 @@
 .left-side
   .left-side__top-bar
-    .left-side__top-bar__user-name ore
+    .left-side__top-bar__user-name= current_user.name
     =link_to 'https://www.rakuteneagles.jp/', class: "left-side__top-bar__create-group" do
       =fa_icon "edit"
-    =link_to 'https://www.rakuteneagles.jp/', class: "left-side__top-bar__user-setting" do
+    =link_to edit_user_path(current_user), class: "left-side__top-bar__user-setting" do
       =fa_icon "cog"
   .left-side__bottom-bar
-    =link_to 'https://www.rakuteneagles.jp/', class:"left-side__bottom-bar__group1" do
+    =link_to 'https://www.rakuteneagles.jp/', class: "left-side__bottom-bar__group1" do
       .left-side__bottom-bar__group1__group-name sample
       .left-side__bottom-bar__group1__new-message 野球終わって寂しい
     =link_to 'https://www.rakuteneagles.jp/', class:"left-side__bottom-bar__group2" do
