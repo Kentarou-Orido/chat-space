@@ -8,4 +8,4 @@
     = csrf_meta_tags
   %body
     = render partial: "left-side"
-    = render partial: "right-main"
+    = render partial: "right-main", object: @group, object: @message, object: @messages

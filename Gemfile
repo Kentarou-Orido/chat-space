@@ -55,3 +55,6 @@ gem 'haml-rails'
 gem 'erb2haml'
 gem "font-awesome-rails"
 gem "devise"
+gem 'pry-byebug', group: :development
+gem 'carrierwave'
+gem "mini_magick"
