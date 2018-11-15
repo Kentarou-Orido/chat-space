@@ -16,7 +16,7 @@
       }
       &__create-group{
         color: $MainWhiteColor;
-        margin-left: 50px;
+        margin-left: 180px;
         text-decoration: none;
       }
       &__user-setting{
@@ -28,14 +28,24 @@
     background-color: #2f3e51;
     height: calc(100vh - 117px);
     padding: 0 20px;
-    &__group{
+    &__group1{
       text-decoration: none;
-      &__name{
+      &__group-name{
         @include first-group-name
       }
-      &__message{
+      &__new-message{
         @include group-message
       }
     }
+    &__group2{
+      text-decoration: none;
+      &__group-name{
+        @include second-group-name
+      }
+      &__new-message{
+        @include group-message
+      }
+    }
+
   }
 }
