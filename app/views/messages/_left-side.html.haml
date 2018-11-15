@@ -1,14 +1,15 @@
 .left-side
   .left-side__top-bar
-    .left-side__top-bar__user-name ore
-    =link_to 'https://www.rakuteneagles.jp/', class: "left-side__top-bar__create-group" do
+    .left-side__top-bar__user-name= current_user.name
+    =link_to new_group_path, class: "left-side__top-bar__create-group" do
       =fa_icon "edit"
-    =link_to 'https://www.rakuteneagles.jp/', class: "left-side__top-bar__user-setting" do
+    =link_to edit_user_path(current_user), class: "left-side__top-bar__user-setting" do
       =fa_icon "cog"
   .left-side__bottom-bar
-    =link_to 'https://www.rakuteneagles.jp/', class:"left-side__bottom-bar__group1" do
-      .left-side__bottom-bar__group1__group-name sample
-      .left-side__bottom-bar__group1__new-message 野球終わって寂しい
-    =link_to 'https://www.rakuteneagles.jp/', class:"left-side__bottom-bar__group2" do
-      .left-side__bottom-bar__group2__group-name 来季の楽天イーグルスが上位争いにくこむために必要なものを考えるグループ
-      .left-side__bottom-bar__group2__new-message 三木谷の辞任でしょ
+    - current_user.groups.each do |group|
+      .left-side__bottom-bar__group
+        = link_to group_messages_path(group) do
+          .left-side__bottom-bar__group__name
+            = group.name
+          .left-side__bottom-bar__group__message
+            メッセージはまだありません。
