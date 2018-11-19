@@ -16,7 +16,6 @@ class MessagesController < ApplicationController
       render :index
     end
   end
-
   private
 
   def message_params

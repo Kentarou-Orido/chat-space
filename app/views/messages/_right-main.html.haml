@@ -1,13 +1,14 @@
 .right-main
   .right-main__header-bar
-    .right-main__header-bar__group-name = @groups.name
+    .right-main__header-bar__group-name
+      = @group.name
     = link_to "edit", edit_group_path(@group), class: "right-main__header-bar__edit-btn"
-    .right-main__header-bar__group-members Members: = @group.user
+    .right-main__header-bar__group-members
+      Members:
+      - @group.users.each do |users|
+        = users.name
   .right-main__chat-main
-    .right-main__chat-main__message
-      .right-main__chat-main__message__name = @messages.user.name
-      .right-main__chat-main__message__time = @messages.messages.created_at
-      .right-main__chat-main__message__body = @messages.body
+    = render partial: 'message', collection: @messages
   .right-main__footer
     = form_for [@group, @message] do |f|
       .right-main__footer__form

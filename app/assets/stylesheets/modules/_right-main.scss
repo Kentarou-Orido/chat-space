@@ -33,6 +33,7 @@
     height: calc(100vh - 117px - 90px);
     padding: 0 40px;
     background-color: #AAAAAA;
+    overflow: scroll;
     &__message{
       &__name{
         @include chat-main-message-name
@@ -43,18 +44,10 @@
       &__body{
         @include chat-main-message-body
       }
-    }
-      &__next-message{
-        &__name{
-          @include chat-main-message-name
-        }
-        &__time{
-          @include chat-main-message-time
-        }
-        &__body{
-          @include chat-main-message-body
-        }
+      &__image{
+        @include chat-main-message-image
       }
+    }
   }
   &__footer{
     background-color: #B8C3C7;

@@ -7,5 +7,5 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-    = render partial: "left-side"
+    = render partial: "left-side", object: @group
     = render partial: "right-main", object: @group, object: @message, object: @messages
