@@ -50,11 +50,18 @@ group :development do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'haml-rails'
-gem 'erb2haml'
-gem "font-awesome-rails"
-gem "devise"
-gem 'pry-byebug', group: :development
-gem 'carrierwave'
-gem "mini_magick"
+  gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+  gem 'haml-rails'
+  gem 'erb2haml'
+  gem "font-awesome-rails"
+  gem "devise"
+  gem 'pry-byebug', group: :development
+  gem 'carrierwave'
+  gem "mini_magick"
+  gem 'rspec-rails'
+  gem 'factory_girl_rails', "~> 4.4.1"
+  gem 'rails-controller-testing'
+
+group :test do
+  gem 'faker'
+end
