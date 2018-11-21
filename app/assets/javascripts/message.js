@@ -30,7 +30,7 @@ $(function() {
     var formData = new FormData(this);
     jqxhr = $.ajax({
       url: $(this).attr('action'),
-      type: "POST",
+      type: $(this).attr('method'),
       data: formData,
       dataType: 'json',
       processData: false,
