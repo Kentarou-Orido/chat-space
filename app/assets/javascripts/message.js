@@ -28,7 +28,7 @@ $(function() {
   $('#js-form').on('submit', function(e) {
     e.preventDefault();
     var formData = new FormData(this);
-    jqxhr = $.ajax({
+    $.ajax({
       url: $(this).attr('action'),
       type: $(this).attr('method'),
       data: formData,
