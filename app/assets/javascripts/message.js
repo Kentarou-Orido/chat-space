@@ -28,6 +28,7 @@ $(function() {
   $('#js-form').on('submit', function(e) {
     e.preventDefault();
     var formData = new FormData(this);
+
     $.ajax({
       url: $(this).attr('action'),
       type: $(this).attr('method'),
@@ -36,14 +37,17 @@ $(function() {
       processData: false,
       contentType: false
     })
-      .done(function(data) {
-        var html = buildHTML(data);
-        $('.right-main__chat-main').append(html);
-        $('.right-main__chat-main').scrollTop($(".right-main__chat-main")[0].scrollHeight);
+
+    .done(function(data) {
+      var html = buildHTML(data);
+      $('.right-main__chat-main').append(html);
+      $('.right-main__chat-main').scrollTop($(".right-main__chat-main")[0].scrollHeight);
     })
-      .fail(function() {
-        alert('error');
-      });
+
+    .fail(function() {
+      alert('error');
+    });
+
     return false;
   });
 });
