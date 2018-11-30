@@ -1,10 +1,10 @@
-.right-main__chat-main__message
+.right-main__chat-main__message{ "data-message-id": "#{message.id}"}
   .right-main__chat-main__message__name
     = message.user.name
   .right-main__chat-main__message__time
     = message.created_at
   .right-main__chat-main__message__body
-  - if message.body.present?
-    = message.body
-  - else
-    = image_tag message.image, class: "right-main__chat-main__message__image" if message.image.present?
+    - if message.body.present?
+      = message.body
+    - else
+      = image_tag message.image, class: "right-main__chat-main__message__image"

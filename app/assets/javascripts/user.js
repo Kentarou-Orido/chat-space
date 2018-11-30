@@ -23,7 +23,7 @@ $(function() {
       url: '/users',
       type: 'GET',
       data: { keyword: input },
-      dataType: 'json',
+      dataType: 'json'
     })
       .done(function(data) {
         $('#user-search-result').empty();
