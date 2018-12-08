@@ -70,4 +70,5 @@ end
 
 group :production do
   gem 'unicorn'
+  gem 'faker', git: 'https://github.com/stympy/faker'
 end
