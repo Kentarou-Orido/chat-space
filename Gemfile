@@ -67,6 +67,7 @@ end
   gem 'rspec-rails'
   gem 'factory_girl_rails', "~> 4.4.1"
   gem 'rails-controller-testing'
+  gem 'fog-aws'
 
 group :production do
   gem 'unicorn'
